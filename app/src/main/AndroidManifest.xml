@@ -27,6 +27,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lewis.networktest.MainActivity" />
         </activity>
+        <activity
+            android:name=".HttpClientParseXML"
+            android:label="@string/title_activity_http_client_parse_xml"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lewis.networktest.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HttpClientParseJSON"
+            android:label="@string/title_activity_http_client_parse_json"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lewis.networktest.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

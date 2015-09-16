@@ -24,6 +24,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button sendRequest;
     private TextView responseText;
     private Button gotoHttpClient;
+    private Button gotoParseXML;
+    private Button gotoParseJSON;
 
     private Handler handler = new Handler(){
         @Override
@@ -50,6 +52,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         sendRequest.setOnClickListener(this);
         gotoHttpClient = (Button) findViewById(R.id.goto_next);
         gotoHttpClient.setOnClickListener(this);
+        gotoParseXML = (Button) findViewById(R.id.goto_pull_parse_xml);
+        gotoParseXML.setOnClickListener(this);
+        gotoParseJSON = (Button) findViewById(R.id.goto_parse_json);
+        gotoParseJSON.setOnClickListener(this);
     }
 
     @Override
@@ -83,6 +89,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.goto_next:
                 Intent intent = new Intent(this,HttpClientActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.goto_pull_parse_xml:
+                Intent i = new Intent(this,HttpClientParseXML.class);
+                startActivity(i);
+                break;
+            case R.id.goto_parse_json:
+                Intent intent_to = new Intent(this,HttpClientParseJSON.class);
+                startActivity(intent_to);
                 break;
             default:
                 break;
